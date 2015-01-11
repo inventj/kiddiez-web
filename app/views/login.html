@@ -1,0 +1,16 @@
+<h1>Login</h1>
+<br/>
+
+<div ng-controller="LoginCtrl as lc">
+<div>
+  <form ng-submit="lc.login(lc.username, lc.password)" data-ng-hide="lc.user">
+
+    <label>Username: <input type="text" ng-model="lc.username"/></label><br/>
+    <label>Password: <input type="password" ng-model="lc.password"/></label><br/>
+    <button type="submit">Login</button>
+
+  </form>
+  <button ng-click="lc.logout()" ng-show="lc.user">Logout</button>
+  <b ng-show="lc.user">Welcome {{lc.user.email}}</b>
+</div>
+</div>
